@@ -1,0 +1,27 @@
+{
+  "name": "electromon-tp4",
+  "version": "1.0.0",
+  "description": "Electromon Shop - TP4 AW2",
+  "main": "index.mjs",
+  "scripts": {
+    "dev": "nodemon index.mjs",
+    "start": "node index.mjs",
+    "db:recrear": "psql -U root -d tienda -f __docker-pg/tienda.sql && psql -U root -d tienda -f __docker-pg/usuarios.sql"
+  },
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mime-types": "^3.0.2",
+    "multer": "^2.1.1",
+    "nanoid": "^5.1.11",
+    "pg": "^8.13.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

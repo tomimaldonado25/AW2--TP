@@ -1,0 +1,6 @@
+node_modules/
+.env
+
+# Imágenes subidas por multer (no se versionan, solo el .gitkeep)
+public/recursos/imagenes/*
+!public/recursos/imagenes/.gitkeep

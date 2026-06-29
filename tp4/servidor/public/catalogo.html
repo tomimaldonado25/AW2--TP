@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Electromon — Catálogo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="catalogo">
+
+  <!-- Header fijo, translúcido sobre el hero -->
+  <header class="site-header site-header--floating">
+    <div class="logo">
+      <span class="logo-pill">
+        <svg viewBox="0 0 48 48" width="24" height="24" aria-hidden="true">
+          <circle cx="24" cy="24" r="21" fill="#fff"/>
+          <path d="M3 24a21 21 0 0 1 42 0z" fill="#FF1C1C"/>
+          <rect x="3" y="22" width="42" height="4" fill="#1C1C1C"/>
+          <circle cx="24" cy="24" r="7" fill="#fff" stroke="#1C1C1C" stroke-width="3"/>
+        </svg>
+      </span>
+      <div class="logo-text">
+        <h1>Electromon</h1>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="catalogo.html" class="active">Catálogo</a>
+      <a href="carrito.html">Carrito <span id="cart-count" class="cart-badge">0</span></a>
+    </nav>
+  </header>
+
+  <!-- ── HERO a pantalla completa ─────────────────────────────────────────── -->
+  <section class="hero-full">
+    <svg class="hero-sky" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#1e293b"/>
+          <stop offset="55%" stop-color="#0f172a"/>
+          <stop offset="100%" stop-color="#0b0f19"/>
+        </linearGradient>
+        <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="purpleGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#c084fc" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <rect width="1440" height="900" fill="url(#skyGrad)"/>
+
+      <circle cx="1160" cy="160" r="320" fill="url(#sunGlow)"/>
+      <circle cx="220" cy="700" r="280" fill="url(#purpleGlow)"/>
+
+      <!-- estrellas -->
+      <g fill="#ffffff" opacity="0.5">
+        <circle cx="120" cy="90" r="2"/>
+        <circle cx="260" cy="200" r="1.5"/>
+        <circle cx="420" cy="60" r="2"/>
+        <circle cx="700" cy="140" r="1.5"/>
+        <circle cx="900" cy="80" r="2"/>
+        <circle cx="1050" cy="230" r="1.5"/>
+        <circle cx="1320" cy="350" r="2"/>
+        <circle cx="180" cy="380" r="1.5"/>
+        <circle cx="550" cy="320" r="2"/>
+      </g>
+
+      <!-- pokébolas decorativas grandes -->
+      <g class="hero-ball hero-ball--big">
+        <circle cx="1230" cy="640" r="120" fill="#1e293b" stroke="#334155" stroke-width="10"/>
+        <path d="M1110 640a120 120 0 0 1 240 0z" fill="#f87171" stroke="#334155" stroke-width="10"/>
+        <rect x="1110" y="630" width="240" height="20" fill="#334155"/>
+        <circle cx="1230" cy="640" r="42" fill="#1e293b" stroke="#334155" stroke-width="10"/>
+        <circle cx="1230" cy="640" r="18" fill="#fbbf24" stroke="#334155" stroke-width="8"/>
+      </g>
+
+      <g class="hero-ball hero-ball--small">
+        <circle cx="150" cy="730" r="58" fill="#1e293b" stroke="#334155" stroke-width="6"/>
+        <path d="M92 730a58 58 0 0 1 116 0z" fill="#38bdf8" stroke="#334155" stroke-width="6"/>
+        <rect x="92" y="725" width="116" height="10" fill="#334155"/>
+        <circle cx="150" cy="730" r="20" fill="#1e293b" stroke="#334155" stroke-width="5"/>
+      </g>
+    </svg>
+
+    <div class="hero-content">
+      <span class="hero-tag">¡Gotta catch &apos;em all!</span>
+      <h2 class="hero-logo">
+        <span class="hero-logo-top">Electro<span class="hero-logo-accent">mon</span></span>
+      </h2>
+      <p class="hero-sub">Cartas holográficas, criaturas legendarias y mucho poder para coleccionar.</p>
+      <a href="#catalogo" class="hero-cta">Ver catálogo ↓</a>
+    </div>
+
+    <a href="#catalogo" class="hero-scroll" aria-label="Bajar al catálogo">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ── CATÁLOGO ──────────────────────────────────────────────────────────── -->
+  <main class="container" id="catalogo">
+
+    <section class="filters">
+      <div class="search-box">
+        <label for="searchInput">Buscar por nombre</label>
+        <input type="text" id="searchInput" placeholder="Ej: pikachu, bulbasaur..." />
+      </div>
+      <button id="searchButton" class="btn-primary">Buscar</button>
+      <button id="resetButton" class="btn-secondary">Ver todos</button>
+    </section>
+
+    <section id="feedback" class="feedback hidden"></section>
+
+    <section id="product-list" class="product-grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Maldonado, Venezia · Aplicaciones Web 2 · Electromon</small>
+    <a href="/login" class="admin-link">Acceso administrador</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

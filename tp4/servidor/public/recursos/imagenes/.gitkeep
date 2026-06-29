@@ -1,0 +1,2 @@
+Esta carpeta almacena las imágenes subidas desde el panel de administración.
+Las imágenes se generan dinámicamente con multer y no se versionan en Git.

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Electromon — Confirmación de compra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="confirmacion">
+
+  <div class="bg-decor" aria-hidden="true">
+    <span class="decor-ball decor-ball--1"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-pill">
+        <svg viewBox="0 0 48 48" width="26" height="26" aria-hidden="true">
+          <circle cx="24" cy="24" r="21" fill="#fff"/>
+          <path d="M3 24a21 21 0 0 1 42 0z" fill="#FF1C1C"/>
+          <rect x="3" y="22" width="42" height="4" fill="#1C1C1C"/>
+          <circle cx="24" cy="24" r="7" fill="#fff" stroke="#1C1C1C" stroke-width="3"/>
+        </svg>
+      </span>
+      <div class="logo-text">
+        <h1>Electromon</h1>
+        <p>La tienda de los entrenadores</p>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="catalogo.html">Catálogo</a>
+      <a href="carrito.html">Carrito <span id="cart-count" class="cart-badge">0</span></a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="confirmation-box" class="confirmation-box"></section>
+
+    <section class="confirmation-actions">
+      <a href="catalogo.html" class="btn-primary">Volver al catálogo</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Maldonado, Venezia · Aplicaciones Web 2 · Electromon</small>
+    <a href="/login" class="admin-link">Acceso administrador</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
